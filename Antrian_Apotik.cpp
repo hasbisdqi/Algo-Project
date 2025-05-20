@@ -4,7 +4,7 @@
 #include <stack>
 using namespace std;
 
-// ========================== STRUCT & GLOBAL ==========================
+// struct
 struct Pasien {
     string nama;
     Pasien* next;
@@ -28,7 +28,7 @@ Pasien* rear = NULL;
 Obat* headObat = NULL;
 stack<string> riwayat;
 
-// ========================== ANTRIAN (QUEUE) ==========================
+// Queue
 void tambahPasien(string nama) {
     Pasien* baru = new Pasien{nama, NULL};
     if (!rear) front = rear = baru;
@@ -65,7 +65,7 @@ void tampilAntrian() {
     }
 }
 
-// ========================== OBAT (LINKED LIST GANDA) ==========================
+// linked list ganda
 void tambahObat() {
     string nama;
     int stok;
@@ -121,7 +121,7 @@ void urutkanObat() {
     cout << "Obat diurutkan berdasarkan nama.\n";
 }
 
-// ========================== FILE ==========================
+//File
 void simpanData() {
     ofstream file("obat.txt");
     Obat* temp = headObat;
@@ -133,7 +133,7 @@ void simpanData() {
     cout << "Data obat disimpan ke 'obat.txt'\n";
 }
 
-// ========================== STACK RIWAYAT ==========================
+// Stack
 void tampilRiwayat() {
     if (riwayat.empty()) {
         cout << "Belum ada riwayat transaksi.\n";
@@ -147,7 +147,7 @@ void tampilRiwayat() {
     }
 }
 
-// ========================== BINARY TREE ==========================
+// Binary tree
 Node* buatNode(string nama) {
     return new Node{nama, NULL, NULL};
 }
@@ -167,7 +167,7 @@ void inorder(Node* akar) {
     }
 }
 
-// ========================== MAIN ==========================
+// eksekusi
 int main() {
     int pilihan;
     string nama;
