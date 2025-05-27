@@ -174,17 +174,9 @@ int main() {
     Node* pohon = NULL;
 
     do {
-        cout << "\n=== MENU ANTRIAN APOTIK ===\n";
-        cout << "1. Tambah Pasien\n";
-        cout << "2. Layani Pasien\n";
-        cout << "3. Tampilkan Antrian\n";
-        cout << "4. Tambah Obat\n";
-        cout << "5. Tampilkan Obat\n";
-        cout << "6. Cari Obat\n";
-        cout << "7. Urutkan Obat\n";
-        cout << "8. Tampilkan Riwayat Transaksi\n";
-        cout << "9. Simpan Data Obat\n";
-        cout << "10. Masukkan ke Pohon & Tampilkan (Inorder)\n";
+        cout << "\n=== MENU APOTIK ===\n";
+        cout << "1. Tambah obat\n"
+        cout << "2. Tambah obat\n"
         cout << "0. Keluar\n";
         cout << "Pilih: ";
         cin >> pilihan;
@@ -212,23 +204,6 @@ int main() {
                 cout << "Cari nama obat: ";
                 getline(cin, nama);
                 cariObat(nama);
-                break;
-            case 7:
-                urutkanObat();
-                break;
-            case 8:
-                tampilRiwayat();
-                break;
-            case 9:
-                simpanData();
-                break;
-            case 10:
-                pohon = NULL;
-                for (Obat* temp = headObat; temp; temp = temp->next)
-                    pohon = tambahNode(pohon, temp->nama);
-                cout << "Pohon Inorder: ";
-                inorder(pohon);
-                cout << endl;
                 break;
             case 0:
                 cout << "Terima kasih!\n";
